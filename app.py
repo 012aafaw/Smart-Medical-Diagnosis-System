@@ -183,17 +183,10 @@ st.sidebar.write(f"✅ عدد الأمراض المدربة: {len(encoder.classe
 st.sidebar.write(f"📌 عدد الأعراض المتاحة: {len(all_symptoms)}")
 st.sidebar.write(f"🧑‍⚕ معلومات المريض: {age} سنة، {gender}")
 
-st.sidebar.header("🚀 نشر التطبيق")
-st.sidebar.write("""
-يمكنك نشر هذا التطبيق على Streamlit Sharing بسهولة:
-1. انشئ حساب على https://share.streamlit.io/
-2. ارفع ملفاتك إلى GitHub
-3. قم بتوصيل حساب GitHub بستريمليت
-4. اضغط Deploy!
-""")
 
 # إعدادات للنشر
 st.sidebar.header("⚙ الإعدادات")
 debug_mode = st.sidebar.checkbox("وضع التصحيح")
 if debug_mode:
+
     st.sidebar.write("المتغيرات المختارة:", selected_symptoms if 'selected_symptoms' in locals() else [])
